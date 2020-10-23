@@ -3,7 +3,7 @@
     <head>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet"/>
-        <link href="../static/custom.css" rel="stylesheet" />
+        <link href="../static/styles/custom.css" rel="stylesheet" />
         <title>Lofi Cafe :^)</title>
 
     </head>
@@ -24,7 +24,7 @@ TODO:
 
         <div id="top_bar" class="page_section">
 
-            <img id="menu" src="../static/menu.png">
+            <img id="menu" src="../static/images/menu.png">
 
         </div>
 
@@ -42,14 +42,14 @@ TODO:
 
         <div id="bottom_bar" class="page_section">
 
-            <div class="bottom_bar_option bottom_bar_element" >
+            <div id="bottom_bar1" class="bottom_bar_option bottom_bar_element" >
                 <p>Enter A Random Room</p>
             </div>
-
-            <div class="bottom_bar_option bottom_bar_element">
-                <p>Create Own Room</p>
-            </div>
-
+            <a href="music">
+                <div id="bottom_bar2" class="bottom_bar_option bottom_bar_element">
+                    <p>Create Own Room</p>
+                </div>
+            </a>
             <div class="small_info_card bottom_bar_element">
                 <ul>
                     <li>Online: 4</li>
@@ -58,6 +58,8 @@ TODO:
             </div>
 
         </div>
+
+        <script src="../static/scripts/main.js"></script>
 
     </body>
 

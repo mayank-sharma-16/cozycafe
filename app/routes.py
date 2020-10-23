@@ -10,7 +10,3 @@ def index():
 @app.route('/music')
 def music():
     return render_template('music_page.html')
-
-@app.route('/favicon.ico')
-def favicon():
-    return 
