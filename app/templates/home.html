@@ -3,10 +3,10 @@
     <head>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet"/>
-        <link href="main.css" rel="stylesheet" />
+        <link href="../static/custom.css" rel="stylesheet" />
         <title>Lofi Cafe :^)</title>
 
-</head>
+    </head>
 
 <!-- 
     span is for inline elements, div is for block level elements whatever that means 
@@ -20,30 +20,45 @@ TODO:
 - i think there are drop down menu's that we can use 
 -->
 
-<body>
+    <body>
 
-    <div class="v27_62">
-        
-        <span class="v52_12">COZY CAFE</span> 
-        <div class="name"></div>
+        <div id="top_bar" class="page_section">
 
-        <div class="v52_18"></div>
-        <span class="v52_19">Online: 4</span>
-        <span class="v52_20">Room: 1</span>
+            <img id="menu" src="../static/menu.png">
 
-        <div class="v52_23"></div>
+        </div>
 
-        <a href = music_page.html>
-            <span class="v52_24">Enter A Random Room</span>
-            <div class="v52_25"></div>
-        </a>
+        <div id="central_title_card" class="page_section">
 
-        <span class="v52_26">Create Own Room</span>
-        <div class="v52_29"></div>
+            <div id="main_title">
+                <h1>COZY CAFE</h1>
+            </div>
 
-        <span class="v62_16">AI Music Generator </span>
-    </div>
+            <div id="sub_title">
+                <h2>AI Music Generator</h2>
+            </div>
 
-</body>
+        </div>
+
+        <div id="bottom_bar" class="page_section">
+
+            <div class="bottom_bar_option bottom_bar_element" >
+                <p>Enter A Random Room</p>
+            </div>
+
+            <div class="bottom_bar_option bottom_bar_element">
+                <p>Create Own Room</p>
+            </div>
+
+            <div class="small_info_card bottom_bar_element">
+                <ul>
+                    <li>Online: 4</li>
+                    <li>Room: 1</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </body>
 
 </html>

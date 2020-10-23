@@ -7,6 +7,10 @@ from flask import render_template
 def index():
     return render_template('home.html')
 
+@app.route('/music')
+def music():
+    return render_template('music_page.html')
+
 @app.route('/favicon.ico')
 def favicon():
     return 

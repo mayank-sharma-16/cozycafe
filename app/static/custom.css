@@ -1,0 +1,97 @@
+*, html {
+    margin:0;
+    padding:0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background: #ABC2C9;
+}
+
+.page_section {
+    display:block;
+}
+
+#top_bar {
+    position: relative;
+    height: 25vh;
+}
+
+#menu {
+    position: absolute;
+    height: 7.5vh;
+    top: 3vh;
+    left: 3vw;
+}
+
+#central_title_card {
+
+    position: relative;
+    width: 60vw;
+    height: 50vh;
+    margin-left: 20vw;
+    /*left: 25vw;
+    top: 25vh;*/
+
+    font-family: Montserrat;
+    font-weight: 600;
+    text-align: center;
+
+    letter-spacing: 0.05em;
+}
+
+#main_title {
+
+    position: absolute;
+    color: #EAD5C2;
+    font-size: 6vh;
+    top: 10vh;
+    width: 60vw;
+    height: 15vh;
+}
+
+#sub_title{
+    position: absolute;
+    color: #9F8D88;
+    font-size: 3vh;
+    top: 25vh;
+    width: 60vw;
+}
+
+#bottom_bar{
+    height: 25vh;
+    position: relative;
+    text-align: center;
+}
+
+.bottom_bar_element {
+    position: relative;
+    display: inline-block;
+
+    font-family: Montserrat;
+    color: #9F8D88;
+    font-size: 2vh;
+
+    
+}
+
+.bottom_bar_option {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 25vw;
+    padding: 2vh;
+
+    border: 2px solid #EAD5C2;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.small_info_card {
+    position: absolute;
+    top: 5vh;
+    right: 6vw;
+    text-align: initial;
+}
