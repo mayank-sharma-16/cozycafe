@@ -72,6 +72,15 @@ body {
     width: 3vw;
 }
 
+
+#control_panel img#play_button {
+    height: 4vh;
+    width: 2vw;
+    vertical-align: top;
+    padding-top: 0.5vh;
+    margin-left: 3.5vw;
+}
+
 #menu {
     position: absolute;
     height: 7.5vh;
@@ -92,4 +101,11 @@ body {
     margin-top: 0vh;
     color: #A1B5CD;
     font-size: 2.25vh
+}
+
+#song_cover_container{
+    width: 40vw;
+    height: 50vh;
+    margin-left: 50vw;
+    border: 3px solid #d4af37;
 }

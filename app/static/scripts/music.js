@@ -26,4 +26,14 @@ var load_default_chatbox_text = function(){
     })
 }
 
+var play_default_song = function(){
+    var audio = new Audio('default.wav');
+    audio.play();
+}
+
+var control_panel_setup = function(){
+    play_default_song();
+}
+
 load_default_chatbox_text();
+control_panel_setup();
