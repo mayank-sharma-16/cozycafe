@@ -25,6 +25,7 @@ body {
 }
 
 #bottom_bar{
+    position: absolute;
     height: 15vh;
     width: 100vw;
     display: inline-block;
@@ -104,8 +105,10 @@ body {
 }
 
 #song_cover_container{
+    position: absolute;
     width: 40vw;
     height: 50vh;
+    margin-top: 10vh;
     margin-left: 50vw;
     border: 3px solid #d4af37;
 }
