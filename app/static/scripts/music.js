@@ -26,13 +26,35 @@ var load_default_chatbox_text = function(){
     })
 }
 
-var play_default_song = function(){
-    var audio = new Audio('default.wav');
-    audio.play();
+var play_pause_song = function(audio, play_button){
+    
+    if(audio.paused){
+        audio.play();
+        play_button.src = "../static/images/pause.png";
+    }
+    else{
+        audio.pause();
+        play_button.src = "../static/images/play.png";
+    }
+}
+
+var restart_song = function(audio){
+    audio.currentTime = 0;
 }
 
 var control_panel_setup = function(){
-    play_default_song();
+    var play_button = document.getElementById('play_button');
+    var previous_button = document.getElementById('previous_button');
+
+    var audio = new Audio('../static/music/ideals.wav');
+
+    play_button.addEventListener("click", function(){
+        play_pause_song(audio, play_button);
+    });
+
+    previous_button.addEventListener("click", function(){
+        restart_song(audio);
+    });
 }
 
 load_default_chatbox_text();
