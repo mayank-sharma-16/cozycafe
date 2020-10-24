@@ -2,34 +2,46 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-        <link href="../static/main.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet"/>
+        <link href="../static/styles/music_style.css" rel="stylesheet" />
         <title>Generate Music!</title>
     </head>
 
-<!-- 
-TODO:
-- add images because some are missing like play and pause
-- also rename these 
-- also fix sizing
-- make bars (song progress and volume bar) responsive :o
--->
-<body>
-    <div class="v17_2">
-        <div class="v24_2">
-    </div>
-    <div class="v24_3"></div>
-    <div class="v27_2"></div>
-    <div class="v27_3"></div>
-    <div class="v27_5"></div>
-    <div class="v27_6"></div>
-    <div class="v27_45"></div>
-    <span class="v27_47">Click here to chat...</span>
-    <div class="v37_2"></div>
-    <div class="v41_17"></div>
-    <span class="v41_18">0:23/5:42</span>
-    <span class="v50_11">COZY CAFE</span>
-    <div class="name"></div>
-    <div class="name"></div>
-    </div>
-</body>
+    <body>
+        <div id="top_bar" class="page_section">
+
+            <img id="menu" src="../static/images/menu.png">
+
+            <div id="main_title">
+                <h1>COZY CAFE</h1>
+            </div>
+
+            <div id="sub_title">
+                <h2>You are in the lo-fi room</h2>
+            </div>
+
+        </div>
+
+        <div id="central_title_card" class="page_section">
+
+
+        </div>
+
+        <div id="bottom_bar" class="page_section">
+
+            <div id="chatbox">
+                <input type="text">
+            </div>
+
+            <div id="control_panel">
+                <img src="../static/images/back.png">
+                <img src="../static/images/back.png">
+                <img src="../static/images/next.png">
+            </div>
+
+        </div>
+
+        <script src="../static/scripts/music.js"></script>
+
+    </body>
 </html>
