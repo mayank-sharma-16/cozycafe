@@ -1,3 +1,5 @@
+import {database} from "./firebase_init.js";
+
 var load_default_chatbox_text = function(){
 
     var chatbox = document.getElementById('chatbox').getElementsByTagName('input')[0];
@@ -59,3 +61,14 @@ var control_panel_setup = function(){
 
 load_default_chatbox_text();
 control_panel_setup();
+
+var users = 95;
+
+var default_song_ref = database.ref('meta/current_users');
+default_song_ref.on('value', function(snapshot){
+    users = snapshot.val()
+});
+
+if(users == 95){
+    alert('Sorry, there are too many users in this room right now. Unfortunately, we cannot add you.');
+}

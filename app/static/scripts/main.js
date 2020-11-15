@@ -1,3 +1,4 @@
+import {database} from "./firebase_init.js";
 
 var bottom_bar_menu = function(bar_element){
     var bar_texts = bar_element.getElementsByTagName('p');
@@ -5,7 +6,7 @@ var bottom_bar_menu = function(bar_element){
     bar_element.addEventListener('mouseover', function(){
 
         bar_element.style.background = "#9F8D88";
-        for (text of bar_texts) {
+        for (var text of bar_texts) {
             text.style.color = "#EAD5C2";
         }
     });
@@ -13,7 +14,7 @@ var bottom_bar_menu = function(bar_element){
     bar_element.addEventListener('mouseout', function(){
 
         bar_element.style.background = "";
-        for (text of bar_texts) {
+        for (var text of bar_texts) {
             text.style.color = "";
         }
     });
