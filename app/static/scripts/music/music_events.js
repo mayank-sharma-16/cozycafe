@@ -1,4 +1,18 @@
-import {database} from "./firebase_init.js";
+import {play_pause_song, restart_song} from './music_controls.js';
+import {add_message_to_chat} from '../util/data_write.js';
+
+var zero_chatbox = function(chatbox){
+    chatbox.value = "";
+    chatbox.style.fontWeight = "";
+    chatbox.style.fontStyle = "";
+};
+
+var default_chatbox = function(chatbox){
+    chatbox.value = "Click here to chat...";
+    chatbox.style.fontWeight = "600";
+    chatbox.style.fontStyle = "normal";
+
+}
 
 var load_default_chatbox_text = function(){
 
@@ -11,37 +25,24 @@ var load_default_chatbox_text = function(){
 
     chatbox.addEventListener('focus', function(){
         if(default_on == true){
-            chatbox.value = "";
-            chatbox.style.fontWeight = "";
-            chatbox.style.fontStyle = "";
+            zero_chatbox(chatbox);
             default_on = false;
         }
     });
 
     chatbox.addEventListener('blur', function(){
         if(default_on == false && chatbox.value == ""){
-            chatbox.value = "Click here to chat...";
-            chatbox.style.fontWeight = "600";
-            chatbox.style.fontStyle = "normal";
+            default_chatbox(chatbox);
             default_on = true;
         }
-    })
-}
+    });
 
-var play_pause_song = function(audio, play_button){
-    
-    if(audio.paused){
-        audio.play();
-        play_button.src = "../static/images/pause.png";
-    }
-    else{
-        audio.pause();
-        play_button.src = "../static/images/play.png";
-    }
-}
-
-var restart_song = function(audio){
-    audio.currentTime = 0;
+    chatbox.addEventListener('keypress', function(event){
+        if(event.key == "Enter"){
+            add_message_to_chat("dev_room", chatbox.value);
+            zero_chatbox(chatbox);
+        }
+    });
 }
 
 var control_panel_setup = function(){
@@ -59,16 +60,7 @@ var control_panel_setup = function(){
     });
 }
 
-load_default_chatbox_text();
-control_panel_setup();
-
-var users = 95;
-
-var default_song_ref = database.ref('meta/current_users');
-default_song_ref.on('value', function(snapshot){
-    users = snapshot.val()
-});
-
-if(users == 95){
-    alert('Sorry, there are too many users in this room right now. Unfortunately, we cannot add you.');
+export var load_components = function(){
+    load_default_chatbox_text();
+    control_panel_setup();
 }
